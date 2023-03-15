@@ -1,0 +1,15 @@
+The point of this project is to create a base
+for reading game engine op codes, allowing you
+to read, edit and save the scripts.
+
+The main intent of this tool was
+to be used as a translation tool
+
+Goals:
+
+-Simple Op definitions
+make it simple to enter user defined opcodes in a text file
+
+-Calculate jump opcodes
+allow the user to edit lines of codes freely,
+such as extending dialogue without breaking jump points.

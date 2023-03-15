@@ -1,0 +1,83 @@
+/ Your Op Codes should be defined like so:
+/ hexCode, opName, datatypes
+/
+/ hexCode: this is the opcode from your game engine, write it in the 0x00 form
+/
+/ opName: this is what the ScriptParser will name this opCode, leave blank as "", 
+/         and it will generate a name based off the hexCode (ie. cmd_0x00)
+/
+/ datatypes: this will tell the ScriptParser how many variables 
+/            and what type of variables they are
+/ 
+/ types: 'b' this will read the variable as a byte
+/ types: 's' this will read the variable as a short
+/ types: 'l' this will read the variable as a dword
+/ types: 'e' this will read the variable as an English string, until it's terminated by a 0x00 byte
+/ types: 'j' this will read the variable as a Japanese string, until it's terminated by a 0x00 byte
+/ 
+/ You can have more than one variable defined in the datatypes section (i.e, "bbb", "bss", "be")
+
+GameName: Love Fetish 1
+FileFormats: .scp
+Version: 0.01
+Author: BlackShadows
+
+0x00, NOP, ""
+0x01, DisplayText, "j"
+0x02, FlushBuffers, ""
+0x04, SetTextBox, "ssss"
+0x05, SetCursorPosition, "ss"
+0x0a, LoadScript, "e"
+0x0b, GetSystemTime, ""
+0x0c, MouseOverEvent, "ssss"
+0x0F, EnableSaveMenu, "b"
+0x13, "", "s"
+0x14, GoTo, "s"
+0x15, JumpTo, "s"
+0x16, Return, ""
+0x17, "", "bb"
+0x18, "", "bbb"
+0x19, ConditionalJump, "bbbs"
+0x1e, LoadANI, "e"
+0x1f, TweenFrames, "bss"
+0x20, "", "s"
+0x21, WaitForFrame, "bs"
+0x22, "", "s"
+0x23, "", "s"
+0x28, FadeFromBlack, "b"
+0x29, FadeToBlack, "b"
+0x2c, "", "b"
+0x2d, "", ""
+0x2e, "", ""
+0x2f, "", "b"
+0x31, "", "b"
+0x32, SetRenderSize, "ssss"
+0x33, DrawImage, "sss"
+0x34, LoadCG, "e"
+0x35, "", ""
+0x37, LoadCG_2, "e"
+0x46, LoadAudioClip_l, "be"
+0x48, PlaySFX_l, "be"
+0x49, "", ""
+0x4a, LoadBGM_2, "be"
+0x4b, "", ""
+0x4c, "", "b"
+0x4e, "", "b"
+0x51, "", "ss"
+0x52, "", ""
+0x54, "", "s"
+0x55, "", ""
+0x56, "", "s"
+0x57, "", ""
+0x59, "", "bbb"
+0x5B, SetFontSize, "bbb"
+0x64, SetWindowSize, "ss"
+0x68, SetRenderDimensions, "ss"
+0x69, LoadSaveFile, "bb"
+0x6e, TransformImageTo, "ssss"
+0x6f, EnableImagePanRange, "ssss"
+0x70, WaitForTransform, ""
+0x71, "", ""
+0x78, "", "b"
+0x7A, LoadBGM, "bbe"
+0x7b, "", ""
